@@ -1,0 +1,16 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Divers
+*.log
+
+# Originaux non compressés des photos (sauvegarde locale, inutile en ligne)
+assets/images/_originaux/
+
+# Captures du livret + transcription (dossier de travail, inutile en ligne)
+assets/livret/

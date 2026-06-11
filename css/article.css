@@ -1,0 +1,99 @@
+/* =========================================================
+   Styles spécifiques à la page "Histoire complète"
+   ========================================================= */
+
+.article-hero {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: #fff;
+  padding: 70px 0 60px;
+}
+.article-hero .back-link { color: #ffd9bf; font-weight: 700; display: inline-block; margin-bottom: 24px; }
+.article-hero .back-link:hover { color: #fff; }
+.article-hero h1 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.4rem); margin-bottom: 14px; }
+.article-sub { color: rgba(255,255,255,.9); font-size: 1.15rem; }
+
+/* Barre de progression de lecture */
+.read-progress {
+  position: fixed; top: 0; left: 0; height: 4px; width: 0;
+  background: var(--terracotta); z-index: 60; transition: width .1s linear;
+}
+
+.article { padding: 70px 0 90px; }
+.article-body { max-width: 760px; }
+
+/* Sommaire */
+.toc {
+  background: var(--sand); border-radius: var(--radius);
+  padding: 24px 28px; margin: 0 0 48px;
+}
+.toc-title {
+  font-family: var(--serif); font-weight: 600; font-size: 1.1rem;
+  margin-bottom: 12px; color: var(--green-dark);
+}
+.toc ol { margin: 0; padding-left: 20px; columns: 2; }
+.toc li { margin-bottom: 8px; color: var(--ink-soft); }
+.toc a { font-weight: 600; }
+.toc a:hover { color: var(--terracotta); }
+
+.chapter { scroll-margin-top: 90px; }
+
+/* Image large */
+.figure-wide { margin: 44px 0; }
+.figure-wide img {
+  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
+  aspect-ratio: 16/9; object-fit: cover; background: var(--sand);
+}
+
+/* Image + texte côte à côte */
+.figure-split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  align-items: center; margin: 40px 0;
+}
+.figure-split-reverse .figure-split-media { order: 2; }
+.figure-split-media img {
+  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
+  aspect-ratio: 4/3; object-fit: cover; background: var(--sand);
+}
+.figure-split-text p { margin-bottom: 14px; }
+.article-body .lead {
+  font-size: 1.3rem; line-height: 1.6; color: var(--ink);
+  font-family: var(--serif); font-weight: 500;
+  border-left: 4px solid var(--terracotta); padding-left: 22px; margin-bottom: 44px;
+}
+.article-body h2 {
+  font-size: 1.8rem; margin: 48px 0 16px;
+  padding-top: 8px;
+}
+.article-body p { color: var(--ink-soft); font-size: 1.08rem; margin-bottom: 20px; }
+.article-body figure { margin: 40px 0; }
+.article-body figure img {
+  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
+  aspect-ratio: 16/9; object-fit: cover; background: var(--sand);
+}
+.article-body figcaption { margin-top: 12px; font-size: .9rem; color: var(--ink-soft); text-align: center; font-style: italic; }
+.article-body blockquote {
+  margin: 44px 0; padding: 28px 32px;
+  background: var(--sand); border-radius: var(--radius);
+  font-family: var(--serif); font-size: 1.35rem; font-style: italic; color: var(--green-dark);
+  border-left: 4px solid var(--terracotta);
+}
+.article-body blockquote cite {
+  display: block; margin-top: 14px; font-size: .95rem; font-style: normal;
+  font-family: var(--sans); font-weight: 700; color: var(--ink-soft);
+}
+
+.article-cta {
+  margin-top: 60px; padding: 40px; text-align: center;
+  background: var(--sand); border-radius: var(--radius);
+}
+.article-cta h3 { font-size: 1.6rem; margin-bottom: 10px; }
+.article-cta p { color: var(--ink-soft); margin-bottom: 24px; }
+
+@media (max-width: 680px) {
+  .article-body .lead { font-size: 1.12rem; }
+  .article-body h2 { font-size: 1.5rem; }
+  .toc ol { columns: 1; }
+  .figure-split { grid-template-columns: 1fr; gap: 20px; }
+  .figure-split-reverse .figure-split-media { order: 0; }
+  .article-body blockquote { font-size: 1.15rem; padding: 22px 24px; }
+}

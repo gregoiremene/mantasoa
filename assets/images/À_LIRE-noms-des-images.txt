@@ -1,0 +1,60 @@
+==========================================================
+  OÙ DÉPOSER TES PHOTOS ET VIDÉOS — École Emmanuel
+==========================================================
+
+Le site cherche tes fichiers à des noms précis. Dépose-les
+avec EXACTEMENT ces noms. Tant qu'une image est absente, un
+visuel de remplacement propre s'affiche automatiquement.
+
+⚠️ PHOTOS : compresse-les avant de les déposer (les tiennes
+faisaient jusqu'à 3,5 Mo !). Outil gratuit : https://squoosh.app
+Vise ~1600 px de large et moins de 400 Ko par photo.
+(Astuce : sur Mac, je peux aussi te les compresser — demande-moi.)
+
+----------------------------------------------------------
+DANS  assets/images/
+----------------------------------------------------------
+  hero.jpg          → grande photo d'accueil (en haut du site)  ✅ déposée
+  ecole.jpg         → photo de l'école (section "L'école")
+  help.jpg          → photo de fond de la section "Nous aider"
+  favicon.png       → petite icône d'onglet (facultatif)
+
+----------------------------------------------------------
+DANS  assets/images/galerie/   (galerie photos + vidéos)
+----------------------------------------------------------
+  photo1.jpg ... photo5.jpg   → les photos de la galerie  ✅ 5 déposées
+  video1.mp4                  → 1re vidéo (lecteur intégré) ✅ déposée
+  video2.mp4                  → 2e vidéo (lecteur intégré)  ✅ déposée
+
+  → Pour ajouter une 6e photo : dépose photo6.jpg ici, puis
+    copie un bloc <a class="gallery-item">…</a> dans index.html.
+
+----------------------------------------------------------
+DANS  assets/images/histoire/   (page Histoire complète)
+----------------------------------------------------------
+La page histoire affiche 12 photos. Voici, pour chaque emplacement,
+la photo du livret à recadrer/capturer (référence = page du livret).
+Dépose chaque photo sous le nom exact indiqué.
+
+  histoire1.jpg  → le village / les hauts plateaux (livret p.5)
+  histoire2.jpg  → Odile à son bureau, salle de classe en briques (p.7)
+  histoire3.jpg  → portrait de Julien Meseguer (p.11 ou p.12)
+  histoire4.jpg  → le mariage d'Odile et Julien, 2001 (p.17)
+  histoire5.jpg  → la fabrication des briques au village (p.10 ou p.16)
+  histoire6.jpg  → l'école en construction (p.16)
+  histoire7.jpg  → la 1ère promotion aux examens (p.23)
+  histoire8.jpg  → les élèves en uniforme (p.34 ou p.35)
+  histoire9.jpg  → les équipes de football (p.26)
+  histoire10.jpg → un bol de riz / le repas partagé (p.52)
+  histoire11.jpg → les enfants parrainés / en classe (p.49 ou p.20)
+  histoire12.jpg → Odile et les institutrices, autrices du livret (p.62)
+
+  (Les légendes sont déjà écrites dans la page ; tu peux les
+   ajuster dans histoire.html si une photo montre autre chose.)
+  Tant qu'une photo n'est pas déposée, un visuel de remplacement
+  s'affiche automatiquement — tu peux donc avancer à ton rythme.
+
+----------------------------------------------------------
+NOTE : le dossier  _originaux/  contient les versions NON
+compressées de tes photos (sauvegarde). Inutile de le mettre
+en ligne avec FileZilla.
