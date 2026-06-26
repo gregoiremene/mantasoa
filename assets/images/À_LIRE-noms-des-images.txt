@@ -30,29 +30,34 @@ DANS  assets/images/galerie/   (galerie photos + vidéos)
     copie un bloc <a class="gallery-item">…</a> dans index.html.
 
 ----------------------------------------------------------
-DANS  assets/images/histoire/   (page Histoire complète)
+DANS  assets/images/histoire/   (page courte « histoire.html »)
 ----------------------------------------------------------
-La page histoire affiche 12 photos. Voici, pour chaque emplacement,
-la photo du livret à recadrer/capturer (référence = page du livret).
-Dépose chaque photo sous le nom exact indiqué.
+La page COURTE affiche 6 photos. Voici, pour chaque emplacement,
+la photo du livret qui conviendrait (référence = page du livret) :
 
-  histoire1.jpg  → le village / les hauts plateaux (livret p.5)
-  histoire2.jpg  → Odile à son bureau, salle de classe en briques (p.7)
-  histoire3.jpg  → portrait de Julien Meseguer (p.11 ou p.12)
-  histoire4.jpg  → le mariage d'Odile et Julien, 2001 (p.17)
-  histoire5.jpg  → la fabrication des briques au village (p.10 ou p.16)
-  histoire6.jpg  → l'école en construction (p.16)
-  histoire7.jpg  → la 1ère promotion aux examens (p.23)
-  histoire8.jpg  → les élèves en uniforme (p.34 ou p.35)
-  histoire9.jpg  → les équipes de football (p.26)
-  histoire10.jpg → un bol de riz / le repas partagé (p.52)
-  histoire11.jpg → les enfants parrainés / en classe (p.49 ou p.20)
-  histoire12.jpg → Odile et les institutrices, autrices du livret (p.62)
+  histoire1.jpg  → la 1ère salle de classe improvisée / Odile (livret p.7)
+  briques1.jpg   → étape 1 : on fabrique les briques (p.10, photo 1)
+  briques2.jpg   → étape 2 : la cuisson la nuit (p.10, photo 2)
+  briques3.jpg   → étape 3 : la cuisson au petit matin (p.10, photo 3)
+  briques4.jpg   → étape 4 : les briques cuites (p.10, photo 4)
+  histoire3.jpg  → le nouveau bâtiment de l'école (p.16 ou p.19)
+  histoire4.jpg  → les élèves en uniforme (p.34 ou p.35)
+  histoire5.jpg  → le repas partagé / un bol de riz (p.52)
+  histoire6.jpg  → Odile et les institutrices, autrices du livret (p.62)
 
   (Les légendes sont déjà écrites dans la page ; tu peux les
    ajuster dans histoire.html si une photo montre autre chose.)
   Tant qu'une photo n'est pas déposée, un visuel de remplacement
   s'affiche automatiquement — tu peux donc avancer à ton rythme.
+
+----------------------------------------------------------
+PAGE COMPLÈTE « histoire-complete.html »
+----------------------------------------------------------
+Elle contient ~79 emplacements « Photo à insérer » (encadrés
+pointillés) à remplir, repérés par la légende d'origine du livret.
+Pas de nom de fichier imposé : quand tes découpes seront prêtes,
+dis-le-moi et je placerai les images aux bons endroits (ou je
+t'explique comment le faire).
 
 ----------------------------------------------------------
 NOTE : le dossier  _originaux/  contient les versions NON

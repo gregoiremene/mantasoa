@@ -2,6 +2,47 @@
    Styles spécifiques à la page "Histoire complète"
    ========================================================= */
 
+/* --- Page intégrale : emplacements photo à remplir, marqueurs à vérifier --- */
+/* Repère discret de page du livret */
+.page-marker {
+  text-align: center; text-transform: uppercase; letter-spacing: .14em;
+  font-size: .72rem; font-weight: 700; color: var(--terracotta);
+  margin: 48px 0 18px; opacity: .8;
+}
+.page-marker.missing { color: var(--ink-soft); font-style: italic; text-transform: none; letter-spacing: 0; }
+
+/* Emplacement photo vide à remplir */
+.photo-slot {
+  border: 2px dashed var(--terracotta);
+  background: repeating-linear-gradient(45deg, #faf4ec, #faf4ec 12px, #f3ebdd 12px, #f3ebdd 24px);
+  border-radius: var(--radius);
+  min-height: 220px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; text-align: center; padding: 24px; color: var(--ink-soft);
+}
+.photo-slot .photo-slot-icon { font-size: 2rem; }
+.photo-slot .photo-slot-label { font-weight: 700; color: var(--terracotta-d); }
+.photo-slot .photo-slot-caption { font-size: .92rem; font-style: italic; max-width: 36ch; }
+.figure-todo { margin: 32px 0; }
+
+/* Marqueur « à vérifier » bien visible (orthographe, mot illisible…) */
+mark.todo {
+  background: #fff1c2; color: #8a5a00;
+  padding: 1px 5px; border-radius: 5px; font-weight: 600; font-size: .92em;
+}
+
+/* Tableau du livret (ex. répartition des classes) */
+.livret-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: .95rem; }
+.livret-table th, .livret-table td { border: 1px solid rgba(43,41,38,.15); padding: 8px 12px; text-align: left; }
+.livret-table th { background: var(--sand); font-family: var(--sans); }
+
+/* Bandeau d'avertissement en haut de la page intégrale */
+.draft-note {
+  background: #fff8e6; border: 1px solid #f1d99a; border-radius: var(--radius);
+  padding: 18px 22px; margin: 0 0 36px; font-size: .95rem; color: #6b5413;
+}
+.draft-note strong { color: #5a4610; }
+
 .article-hero {
   background: linear-gradient(135deg, var(--green-dark), var(--green));
   color: #fff;
@@ -44,6 +85,15 @@
   aspect-ratio: 16/9; object-fit: cover; background: var(--sand);
 }
 
+/* Grille de petites images (ex. les 4 étapes de fabrication des briques) */
+.figure-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 40px 0; }
+.figure-grid figure { margin: 0; }
+.figure-grid img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border-radius: 12px; box-shadow: var(--shadow); background: var(--sand);
+}
+.figure-grid figcaption { margin-top: 8px; font-size: .85rem; color: var(--ink-soft); text-align: center; font-style: italic; }
+
 /* Image + texte côte à côte */
 .figure-split {
   display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
@@ -53,6 +103,11 @@
 .figure-split-media img {
   width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
   aspect-ratio: 4/3; object-fit: cover; background: var(--sand);
+}
+.figure-split-reverse .low-ratio { order: 2; }
+.low-ratio img {
+  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
+  aspect-ratio: 4/2.5; object-fit: cover; background: var(--sand);
 }
 .figure-split-text p { margin-bottom: 14px; }
 .article-body .lead {
@@ -88,6 +143,13 @@
 }
 .article-cta h3 { font-size: 1.6rem; margin-bottom: 10px; }
 .article-cta p { color: var(--ink-soft); margin-bottom: 24px; }
+
+.article-cta1 {
+  padding: 40px; text-align: center; margin-bottom: 40px;
+  background: var(--sand); border-radius: var(--radius);
+}
+.article-cta1 h3 { font-size: 1.6rem; margin-bottom: 10px; }
+.article-cta1 p { color: var(--ink-soft); margin-bottom: 24px; }
 
 @media (max-width: 680px) {
   .article-body .lead { font-size: 1.12rem; }

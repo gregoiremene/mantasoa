@@ -57,8 +57,9 @@
           porté par une équipe engagée et soutenu par l'association Emmanuel.
         </p>
         <div class="hero-actions">
-          <a href="#ecole" class="btn btn-primary">Découvrir l'école</a>
-          <a href="#aider" class="btn btn-ghost">Faire un don</a>
+          <a href="histoire.html" class="btn btn-primary">Découvrir l'école</a>
+          <!-- <a href="#aider" class="btn btn-ghost">Faire un don</a> -->
+          <a href="https://www.helloasso.com/associations/association-emmanuel/formulaires/1" target="_blank" class="btn btn-ghost" rel="noopener">Faire un don</a>
         </div>
       </div>
       <a href="#ecole" class="scroll-cue" aria-label="Défiler vers le bas">▾</a>
@@ -68,7 +69,7 @@
     <section class="stats">
       <div class="container stats-grid reveal">
         <!-- MODIFIABLE : remplace les chiffres et libellés -->
-        <div class="stat"><span class="stat-num">200+</span><span class="stat-label">élèves accueillis</span></div>
+        <div class="stat"><span class="stat-num">750+</span><span class="stat-label">élèves accueillis</span></div>
         <div class="stat"><span class="stat-num">15</span><span class="stat-label">enseignants &amp; encadrants</span></div>
         <div class="stat"><span class="stat-num">2003</span><span class="stat-label">année de création</span></div>
         <div class="stat"><span class="stat-num">100%</span><span class="stat-label">au service des enfants</span></div>
@@ -168,6 +169,31 @@
           <a class="gallery-item" href="assets/images/galerie/photo5.jpg">
             <img src="assets/images/galerie/photo5.jpg" alt="Bâtiment de l'école" loading="lazy" />
           </a>
+          <a class="gallery-item" href="assets/images/galerie/photo6.jpg">
+            <img src="assets/images/galerie/photo6.jpg" alt="une classe" loading="lazy" />
+          </a>
+        </div>
+
+        <!-- GALERIE PHOTOS : remplace les images par les tiennes -->
+        <div class="gallery reveal">
+          <a class="gallery-item" href="assets/images/galerie/photo7.jpg">
+            <img src="assets/images/galerie/photo7.jpg" alt="Vie à l'école" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="assets/images/galerie/photo8.jpg">
+            <img src="assets/images/galerie/photo8.jpg" alt="Élèves en classe" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="assets/images/galerie/photo9.jpg">
+            <img src="assets/images/galerie/photo9.jpg" alt="Cour de récréation" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="assets/images/galerie/photo10.jpg">
+            <img src="assets/images/galerie/photo10.jpg" alt="Activité pédagogique" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="assets/images/galerie/photo11.jpg">
+            <img src="assets/images/galerie/photo11.jpg" alt="Bâtiment de l'école" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="assets/images/galerie/photo12.jpg">
+            <img src="assets/images/galerie/photo12.jpg" alt="une classe" loading="lazy" />
+          </a>
         </div>
 
         <!-- VIDÉOS hébergées sur le site (lecteur intégré).
@@ -180,14 +206,28 @@
               <source src="assets/images/galerie/video1.mp4" type="video/mp4" />
               Votre navigateur ne peut pas lire cette vidéo.
             </video>
-            <p class="video-title">Présentation de l'école</p>
+            <p class="video-title">L'école</p>
           </div>
           <div class="video-card">
             <video class="video-player" controls preload="metadata" playsinline>
               <source src="assets/images/galerie/video2.mp4" type="video/mp4" />
               Votre navigateur ne peut pas lire cette vidéo.
             </video>
-            <p class="video-title">Une journée à Mantasoa</p>
+            <p class="video-title">Comme un lundi</p>
+          </div>
+          <div class="video-card">
+            <video class="video-player" controls preload="metadata" playsinline>
+              <source src="assets/images/galerie/video3.mp4" type="video/mp4" />
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <p class="video-title">Des petits comme des grands</p>
+          </div>
+          <div class="video-card">
+            <video class="video-player" controls preload="metadata" playsinline>
+              <source src="assets/images/galerie/video4.mp4" type="video/mp4" />
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <p class="video-title">Un peu de compétition !</p>
           </div>
         </div>
       </div>
@@ -204,9 +244,22 @@
           Le don est sécurisé et géré via HelloAsso.
         </p>
         <!-- MODIFIABLE : remplace le href par ton vrai lien HelloAsso -->
-        <a href="https://www.helloasso.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <!-- <a href="https://www.helloasso.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
           Faire un don sur HelloAsso →
-        </a>
+        </a> -->
+        <button id="openHaOverlay" class="btn btn-primary btn-lg">Faire un don sur HelloAsso →</button>
+        <div id="haWidgetModal" style="position: fixed; inset: 0; display: none; align-items: center; justify-content: center; backdrop-filter: blur(15px) brightness(0.5); z-index: 2147483647;">
+          <button id="closeHaWidgetBtn" style="position: absolute; top: .5rem; right: 1.5rem; z-index: 2147483648; background: #EFEFF4; border: none; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+          <div class="modal-content" style="position: relative; width: 100%; max-width: 950px; height: 100%; overflow: hidden;">
+            <iframe
+              id="haWidget"
+              src="https://www.helloasso.com/associations/association-emmanuel/formulaires/1/widget?view=overlay"
+              style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+            ></iframe>
+          </div>
+        </div>
         <p class="help-note">HelloAsso est une plateforme française de paiement solidaire, sans frais pour l'association.</p>
       </div>
     </section>
@@ -221,7 +274,7 @@
           <span class="brand-mark">E</span>
           <span class="brand-text">École Emmanuel<small>Mantasoa · Madagascar</small></span>
         </div>
-        <p class="footer-about">École franco-malgache privée à but non lucratif, soutenue par l'association Emmanuel.</p>
+        <p class="footer-about">École franco-malgache privée, soutenue par l'association Emmanuel à but non lucratif.</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -237,9 +290,10 @@
         <h4>Contact</h4>
         <!-- MODIFIABLE : coordonnées réelles -->
         <ul class="footer-links">
-          <li>Mantasoa, Madagascar</li>
-          <li><a href="mailto:contact@ecole-emmanuel.org">contact@ecole-emmanuel.org</a></li>
-          <li><a href="https://www.helloasso.com/" target="_blank" rel="noopener">Faire un don</a></li>
+          <li>Mantasoa, Madagascarr</li>
+          <li><a href="mailto:lisalwasp@gmail.com">lisalwasp@gmail.com</a></li>
+          <li><a href="https://www.helloasso.com/associations/association-emmanuel/formulaires/1" target="_blank" rel="noopener">Faire un don</a></li>
+          <!-- <li><button id="openHaOverlay">Faire un don</button></li> -->
         </ul>
       </div>
     </div>
@@ -256,5 +310,34 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openHaOverlay');
+      const modal = document.getElementById('haWidgetModal');
+      const closeBtn = document.getElementById('closeHaWidgetBtn');
+      const body = document.body;
+
+      closeBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round" />
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#333" stroke-width="2" stroke-linecap="round" />
+        </svg>`;
+
+      openBtn.addEventListener('click', () => {
+        modal.classList.add('open');
+        modal.style.display = 'flex';
+        body.style.overflow = 'hidden';
+        body.style.overscrollBehaviorY = 'none';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+        modal.style.display = 'none';
+        body.style.overflow = '';
+        body.style.overscrollBehaviorY = '';
+      });
+
+      closeBtn.addEventListener('mouseenter', () => closeBtn.style.background = '#E0E0E8');
+      closeBtn.addEventListener('mouseleave', () => closeBtn.style.background = '#EFEFF4');
+    })
+  </script>
 </body>
 </html>

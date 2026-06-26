@@ -96,14 +96,16 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.12; font-weight: 600;
   min-height: 88vh;
   display: flex; align-items: center;
   color: #fff;
+  /* Voile vert par-dessus la photo. Pour rendre la photo PLUS visible,
+     baisse les 2 opacités (le .60 = côté gauche/texte, le .15 = côté droit). */
   background:
-    linear-gradient(120deg, rgba(21,74,62,.78), rgba(21,74,62,.45)),
+    linear-gradient(120deg, rgba(21,74,62,.60), rgba(21,74,62,.15)),
     url("../assets/images/hero.jpg") center/cover no-repeat,
     linear-gradient(120deg, var(--green-dark), var(--green));
   background-blend-mode: normal;
 }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(21,74,62,.55), transparent 45%); }
-.hero-content { position: relative; max-width: 720px; padding-top: 40px; padding-bottom: 60px; }
+.hero-content { position: relative; max-width: 720px; padding-top: 40px; padding-bottom: 60px; text-shadow: 0 2px 14px rgba(15,40,33,.45); }
 .hero-eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: .8rem; font-weight: 700; color: #ffd9bf; margin-bottom: 18px; }
 .hero h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); color: #fff; margin-bottom: 22px; }
 .hero-lead { font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 600px; color: rgba(255,255,255,.92); margin-bottom: 34px; }
@@ -167,15 +169,18 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.12; font-weight: 600;
 .videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .video-card { text-align: center; }
 .video-player {
-  width: 100%; aspect-ratio: 16/9; border-radius: 14px;
-  background: #000; box-shadow: var(--shadow); object-fit: cover; display: block;
+  /* Vidéos verticales (format téléphone 9:16). Pour des vidéos paysage,
+     remettre aspect-ratio: 16/9 et retirer le max-width. */
+  width: 100%; max-width: 340px; aspect-ratio: 9/16; border-radius: 14px;
+  background: #000; box-shadow: var(--shadow); object-fit: cover;
+  display: block; margin: 0 auto;
 }
 .video-title { margin-top: 14px; font-weight: 700; }
 
 /* ---------- Nous aider ---------- */
 .help {
   background:
-    linear-gradient(135deg, rgba(21,74,62,.94), rgba(31,110,92,.9)),
+    linear-gradient(135deg, rgba(21,74,62,.74), rgba(31,110,92,.9)),
     url("../assets/images/help.jpg") center/cover no-repeat,
     var(--green-dark);
   color: #fff; text-align: center;
