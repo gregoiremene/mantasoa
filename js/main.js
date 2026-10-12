@@ -96,6 +96,83 @@
     window.addEventListener("resize", updateProgress);
   }
 
+  /* ---- Carrousel galerie (regroupe les photos par pages de 6) ---- */
+  var carousel = document.getElementById("galleryCarousel");
+  if (carousel) {
+    var viewport = carousel.querySelector(".gallery-viewport");
+    var track = carousel.querySelector(".gallery-track");
+    var prevBtn = carousel.querySelector(".carousel-prev");
+    var nextBtn = carousel.querySelector(".carousel-next");
+    var dotsWrap = carousel.querySelector(".carousel-dots");
+    var PER_PAGE = 6;
+
+    var items = Array.prototype.slice.call(track.querySelectorAll(".gallery-item"));
+    var pageCount = Math.ceil(items.length / PER_PAGE);
+
+    // (Re)construit le ruban en tranches de 6 photos
+    track.innerHTML = "";
+    for (var p = 0; p < pageCount; p++) {
+      var slide = document.createElement("div");
+      slide.className = "gallery-slide";
+      for (var i = p * PER_PAGE; i < Math.min((p + 1) * PER_PAGE, items.length); i++) {
+        slide.appendChild(items[i]);
+      }
+      track.appendChild(slide);
+    }
+
+    if (pageCount <= 1) {
+      // Une seule page : pas de flèches ni de points
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+    } else {
+      var current = 0;
+
+      var clamp = function (n) { return Math.max(0, Math.min(n, pageCount - 1)); };
+      var update = function () {
+        var dots = dotsWrap.children;
+        for (var d = 0; d < dots.length; d++) {
+          dots[d].classList.toggle("active", d === current);
+        }
+        if (prevBtn) prevBtn.disabled = current === 0;
+        if (nextBtn) nextBtn.disabled = current === pageCount - 1;
+      };
+      var goTo = function (n) {
+        current = clamp(n);
+        viewport.scrollTo({ left: current * viewport.clientWidth, behavior: "smooth" });
+        update();
+      };
+
+      // Points de navigation
+      for (var q = 0; q < pageCount; q++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Aller à la page " + (q + 1) + " sur " + pageCount);
+        (function (idx) { dot.addEventListener("click", function () { goTo(idx); }); })(q);
+        dotsWrap.appendChild(dot);
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", function () { goTo(current - 1); });
+      if (nextBtn) nextBtn.addEventListener("click", function () { goTo(current + 1); });
+
+      // Synchronise les points quand on fait défiler au doigt (swipe)
+      var scrollTimer;
+      viewport.addEventListener("scroll", function () {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function () {
+          current = clamp(Math.round(viewport.scrollLeft / viewport.clientWidth));
+          update();
+        }, 90);
+      }, { passive: true });
+
+      // Garde la bonne page alignée si la fenêtre change de taille
+      window.addEventListener("resize", function () {
+        viewport.scrollLeft = current * viewport.clientWidth;
+      });
+
+      update();
+    }
+  }
+
   /* ---- Lightbox galerie photos ---- */
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");

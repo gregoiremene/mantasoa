@@ -6,11 +6,16 @@
   <title>École Emmanuel — Mantasoa, Madagascar</title>
   <meta name="description" content="L'école Emmanuel, école franco-malgache à Mantasoa (Madagascar). Découvrez son histoire, l'association qui la soutient, et comment nous aider." />
 
-  <!-- Réseaux sociaux / aperçu de lien (à compléter avec ta vraie image) -->
+  <!-- Adresse canonique de la page (évite le contenu dupliqué) -->
+  <link rel="canonical" href="https://ecole-emmanuel-mantasoa.org/" />
+
+  <!-- Réseaux sociaux / aperçu de lien -->
   <meta property="og:title" content="École Emmanuel — Mantasoa, Madagascar" />
   <meta property="og:description" content="Une école franco-malgache au cœur de Mantasoa. Histoire, association et soutien." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/hero.jpg" />
+  <meta property="og:url" content="https://ecole-emmanuel-mantasoa.org/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://ecole-emmanuel-mantasoa.org/assets/images/hero.jpg" />
 
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
@@ -20,6 +25,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Données structurées : aide Google à comprendre que c'est une école à Mantasoa.
+       Remplace l'URL, et complète l'adresse/les coordonnées si tu les as (facultatif). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "Lycée Privé Emmanuel",
+    "alternateName": "École Emmanuel",
+    "description": "École franco-malgache à Mantasoa (Madagascar) : enseignement de qualité porté par une équipe engagée et soutenu par l'association Emmanuel.",
+    "url": "https://ecole-emmanuel-mantasoa.org/",
+    "image": "https://ecole-emmanuel-mantasoa.org/assets/images/hero.jpg",
+    "logo": "https://ecole-emmanuel-mantasoa.org/assets/images/favicon.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mantasoa",
+      "addressCountry": "MG"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -37,6 +62,7 @@
 
       <nav class="site-nav">
         <a href="#ecole">L'école</a>
+        <a href="#resultats">Résultats</a>
         <a href="#association">L'association</a>
         <a href="#galerie">Photos &amp; vidéos</a>
         <a href="#aider" class="nav-cta">Nous aider</a>
@@ -103,8 +129,40 @@
       </div>
     </section>
 
+    <!-- ====================== RÉSULTATS ====================== -->
+    <section class="section section-alt" id="resultats">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Année 2026</p>
+          <h2>Nos résultats aux examens</h2>
+          <p class="section-intro">
+            Des élèves plus que méritants et une équipe fière !
+          </p>
+        </div>
+
+        <!-- MODIFIABLE : mets à jour les chiffres chaque année. -->
+        <div class="results-grid reveal">
+          <article class="card result-card">
+            <p class="result-exam">CEPE<span>Certificat d'études primaires élémentaires</span></p>
+            <p class="result-rate">96,61<span class="result-unit">%</span></p>
+            <p class="result-detail">57 élèves admis sur 59</p>
+          </article>
+          <article class="card result-card">
+            <p class="result-exam">BEPC<span>Brevet des collèges</span></p>
+            <p class="result-rate">93,54<span class="result-unit">%</span></p>
+            <p class="result-detail">29 élèves admis sur 31</p>
+          </article>
+          <article class="card result-card">
+            <p class="result-exam">Baccalauréat<span>Séries L &amp; S</span></p>
+            <p class="result-rate">17<span class="result-unit">reçus</span></p>
+            <p class="result-detail">Mentions&nbsp;: 4 Assez bien · 13 Passable</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ====================== L'ASSOCIATION ====================== -->
-    <section class="section section-alt" id="association">
+    <section class="section" id="association">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">L'association Emmanuel</p>
@@ -144,7 +202,7 @@
     </section>
 
     <!-- ====================== PHOTOS & VIDÉOS ====================== -->
-    <section class="section" id="galerie">
+    <section class="section section-alt" id="galerie">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">En images</p>
@@ -152,48 +210,70 @@
           <p class="section-intro">Quelques instants de vie à l'école Emmanuel.</p>
         </div>
 
-        <!-- GALERIE PHOTOS : remplace les images par les tiennes -->
-        <div class="gallery reveal">
-          <a class="gallery-item" href="assets/images/galerie/photo1.jpg">
-            <img src="assets/images/galerie/photo1.jpg" alt="Vie à l'école" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo2.jpg">
-            <img src="assets/images/galerie/photo2.jpg" alt="Élèves en classe" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo3.jpg">
-            <img src="assets/images/galerie/photo3.jpg" alt="Cour de récréation" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo4.jpg">
-            <img src="assets/images/galerie/photo4.jpg" alt="Activité pédagogique" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo5.jpg">
-            <img src="assets/images/galerie/photo5.jpg" alt="Bâtiment de l'école" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo6.jpg">
-            <img src="assets/images/galerie/photo6.jpg" alt="une classe" loading="lazy" />
-          </a>
-        </div>
+        <!-- ============================ GALERIE PHOTOS (carrousel) ============================
+             POUR AJOUTER UNE PHOTO : copie un bloc <a class="gallery-item">…</a> ci-dessous,
+             change le numéro du fichier (ex. photo13.jpg) et dépose l'image dans
+             assets/images/galerie/. Pas de limite : le carrousel se réorganise tout seul
+             en pages de 6 photos, avec les flèches ‹ › et les points pour faire défiler.
+             (Astuce SEO/accessibilité : décris chaque photo dans le texte alt="…".) -->
+        <div class="gallery-carousel reveal" id="galleryCarousel">
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Photos précédentes">‹</button>
 
-        <!-- GALERIE PHOTOS : remplace les images par les tiennes -->
-        <div class="gallery reveal">
-          <a class="gallery-item" href="assets/images/galerie/photo7.jpg">
-            <img src="assets/images/galerie/photo7.jpg" alt="Vie à l'école" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo8.jpg">
-            <img src="assets/images/galerie/photo8.jpg" alt="Élèves en classe" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo9.jpg">
-            <img src="assets/images/galerie/photo9.jpg" alt="Cour de récréation" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo10.jpg">
-            <img src="assets/images/galerie/photo10.jpg" alt="Activité pédagogique" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo11.jpg">
-            <img src="assets/images/galerie/photo11.jpg" alt="Bâtiment de l'école" loading="lazy" />
-          </a>
-          <a class="gallery-item" href="assets/images/galerie/photo12.jpg">
-            <img src="assets/images/galerie/photo12.jpg" alt="une classe" loading="lazy" />
-          </a>
+          <div class="gallery-viewport">
+            <div class="gallery-track">
+              <a class="gallery-item" href="assets/images/galerie/photo13.jpg">
+                <img src="assets/images/galerie/photo13.jpg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo14.jpg">
+                <img src="assets/images/galerie/photo14.jpg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo15.jpg">
+                <img src="assets/images/galerie/photo15.jpg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo16.jpeg">
+                <img src="assets/images/galerie/photo16.jpeg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo1.jpg">
+                <img src="assets/images/galerie/photo1.jpg" alt="Vie à l'école" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo2.jpg">
+                <img src="assets/images/galerie/photo2.jpg" alt="Élèves en classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo3.jpg">
+                <img src="assets/images/galerie/photo3.jpg" alt="Cour de récréation" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo4.jpg">
+                <img src="assets/images/galerie/photo4.jpg" alt="Activité pédagogique" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo5.jpg">
+                <img src="assets/images/galerie/photo5.jpg" alt="Bâtiment de l'école" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo6.jpg">
+                <img src="assets/images/galerie/photo6.jpg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo7.jpg">
+                <img src="assets/images/galerie/photo7.jpg" alt="Vie à l'école" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo8.jpg">
+                <img src="assets/images/galerie/photo8.jpg" alt="Élèves en classe" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo9.jpg">
+                <img src="assets/images/galerie/photo9.jpg" alt="Cour de récréation" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo10.jpg">
+                <img src="assets/images/galerie/photo10.jpg" alt="Activité pédagogique" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo11.jpg">
+                <img src="assets/images/galerie/photo11.jpg" alt="Bâtiment de l'école" loading="lazy" decoding="async" />
+              </a>
+              <a class="gallery-item" href="assets/images/galerie/photo12.jpg">
+                <img src="assets/images/galerie/photo12.jpg" alt="une classe" loading="lazy" decoding="async" />
+              </a>
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-next" type="button" aria-label="Photos suivantes">›</button>
+          <div class="carousel-dots" aria-hidden="true"></div>
         </div>
 
         <!-- VIDÉOS hébergées sur le site (lecteur intégré).
